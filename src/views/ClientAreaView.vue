@@ -76,8 +76,9 @@ export default {
     async getUserInfo() {
        request.post('/survey/user/userinfo').then(res => {
         if (res.code === 200) {
-          this.userInfo = res.data;
+          // this.userInfo = res.data;
           this.userInfoLoading = false;
+          this.$store.dispatch('setUserInfo', res.data);
         }else {
           console.log(res.msg);
         }
@@ -129,6 +130,11 @@ export default {
       } else {
         return ''; // 返回空字符串或默认值
       }
+    }
+  },
+  computed: {
+    userInfo() {
+      return this.$store.state.UserInfo;
     }
   }
 }

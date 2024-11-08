@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {createRouter, createWebHashHistory, createWebHistory} from 'vue-router';
 // 导入你的路由组件
 import Home from "../views/HomeView.vue"
 import Login from "../views/LoginView.vue"
@@ -15,7 +15,6 @@ import NotificationInformation from "../views/NotificationInformationView.vue";
 import Survey from "../views/SurveyView.vue";
 import NewDetails from "../views/NewDetails.vue";
 import Promotion from "../views/PromotionView.vue";
-import Lo from "../components/Lo.vue";
 import SurveyActivity from "../views/SurveyActivity.vue";
 import ForgetPassword from "../views/ForgetPassword.vue";
 import VerifyMailbox from "../views/VerifyMailbox.vue";
@@ -29,107 +28,105 @@ const routes = [
 	{
         path: '/login',
 		name: 'Login',
-        component: Login
+        component: Login,
+		meta: { title: 'SurveyMonkey- Login'}
     },
-	{
-		path: '/lo',
-		name: 'Lo',
-		component:Lo
-	},
 	{
         path: '/register',
 		name: 'Register',
-        component: Register
+        component: Register,
+		meta: { title: 'SurveyMonkey- Register'}
     },
 	{
         path: '/forgetPassword',
 		name: 'ForgetPassword',
-        component: ForgetPassword
+        component: ForgetPassword,
+		meta: { title: 'SurveyMonkey- Forget Password'}
     },
 	{
 		path: '/userCenter',
 		name: 'UserCenter',
 		component: UserCenter,
 		redirect: '/userCenter/clientArea',
-		meta: { requiresAuth: true,title: '主页'},
+		meta: { requiresAuth: true,title: 'SurveyMonkey- User Center'},
 		children: [
 			{
 				path: '/userCenter/clientArea',
 				name: 'ClientArea',
 				component: ClientArea,
-				meta: { requiresAuth: true,title: '客户区'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Client Area'},
 			},
 			{
 				path: '/userCenter/profile',
 				name: 'Profile',
 				component: Profile,
-				meta: { requiresAuth: true,title: '个人资料'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Profile'},
 			},
 			{
 				path: '/userCenter/verifyMailbox',
 				name: 'VerifyMailbox',
 				component: VerifyMailbox,
-				meta: { requiresAuth: true,title: '验证邮箱'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Verify Mailbox'},
 			},
 			{
 				path: '/userCenter/wallet',
 				name: 'Wallet',
 				component: Wallet,
-				meta: { requiresAuth: true,title: '钱包'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Wallet'},
 			},
 			{
 				path: '/userCenter/transfer',
 				name: 'Transfer',
 				component: Transfer,
-				meta: { requiresAuth: true,title: '转账'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Transfer'},
 			},
 			{
 				path: '/userCenter/promotion',
 				name: 'promotion',
 				component: Promotion,
-				meta: { requiresAuth: true,title: '推广'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Promotion'},
 			},
 			{
 				path: '/userCenter/userManage',
 				name: 'UserManage',
 				component: UserManage,
-				meta: { requiresAuth: true,title: '用户管理'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- User Manage'},
 			},
 			{
 				path: '/userCenter/serviceTicket',
 				name: 'ServiceTicket',
 				component: ServiceTicket,
-				meta: { requiresAuth: true,title: '服务单'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Service Ticket'},
 			},
 			{
 				path: '/userCenter/questionnaireRecord',
 				name: 'QuestionnaireRecord',
 				component: QuestionnaireRecord,
-				meta: { requiresAuth: true,title: '问卷记录'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Questionnaire Record'},
 			},
 			{
 				path: '/userCenter/notificationInformation',
 				name: 'NotificationInformation',
 				component: NotificationInformation,
-				meta: { requiresAuth: true,title: '通知信息'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Notification Information'},
 			},
 			{
 				path: '/userCenter/survey',
 				name: 'survey',
 				component: Survey,
-				meta: { requiresAuth: true,title: '调查问卷'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Survey'},
 			},
 			{
 				path: '/userCenter/newDetails/:id',
 				name: 'newDetails',
 				component: NewDetails,
-				meta: { requiresAuth: true,title: '公告详情'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- New Details'},
 			},
 			{
 				path: '/userCenter/surveyActivity',
 				name: 'surveyActivity',
 				component: SurveyActivity,
-				meta: { requiresAuth: true,title: '调查活动'},
+				meta: { requiresAuth: true,title: 'SurveyMonkey- Survey Activity'},
 			}
 		]
 	}
@@ -137,7 +134,7 @@ const routes = [
 ];
 
 const router = createRouter({
-	history: createWebHistory(),
+	history: createWebHistory(), // 简写 `history: history`
 	routes // 简写 `routes: routes`
 });
 

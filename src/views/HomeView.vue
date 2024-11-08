@@ -20,7 +20,9 @@ import Footer from "../components/Footer.vue";
 
                 <div class="buttons is-left">
                   <button class="button is-medium is-orange button is-link is-light">
-                    Involved Now
+                    <router-link to="/login">
+                      Involved Now
+                    </router-link>
                   </button>
                   <a href="#footer" class="button is-medium is-black is-primary is-light">Contact Us</a>
                 </div>
@@ -43,41 +45,41 @@ import Footer from "../components/Footer.vue";
         <br />
         <div class="columns">
           <div class="column">
-            <div class="card"  style="height: 300px;">
+            <div class="card">
               <div class="card-content">
                 <div class="has-text-centered">
                   <img style="height: 150px;" src="../assets/images/cash.jpg" />
                 </div>
 <!--                <h3 class="title is-3 has-text-centered" id="card-product-description">Orange</h3>-->
-                <p class="has-text-centered">
-                  Through our points redemption system, you can redeem virtual currency equal to the US dollar, and pay the cash you redeem through the world's largest exchange Binance
-                </p>
+<!--                <p class="has-text-centered">-->
+<!--                  Through our points redemption system, you can redeem virtual currency equal to the US dollar, and pay the cash you redeem through the world's largest exchange Binance-->
+<!--                </p>-->
               </div>
             </div>
           </div>
           <div class="column">
-            <div class="card" style="height: 300px;">
+            <div class="card">
               <div class="card-content">
                 <div class="has-text-centered">
                   <img style="height: 150px;" src="../assets/images/shopping.png" />
                 </div>
 <!--                <h3 class="title is-3 has-text-centered" id="card-product-description">Orange</h3>-->
-                <p class="has-text-centered">
-                  In our points redemption system, we also set up shopping cards, including shopping cards from Amazon, eBay, Walmart, Shopee and other platforms. We will send your shopping card to your email when you redeem it.
-                </p>
+<!--                <p class="has-text-centered">-->
+<!--                  In our points redemption system, we also set up shopping cards, including shopping cards from Amazon, eBay, Walmart, Shopee and other platforms. We will send your shopping card to your email when you redeem it.-->
+<!--                </p>-->
               </div>
             </div>
           </div>
           <div class="column">
-            <div class="card"  style="height: 300px;">
+            <div class="card">
               <div class="card-content">
                 <div class="has-text-centered">
                   <img style="height: 150px;" src="../assets/images/car.jpg" />
                 </div>
 <!--                <h3 class="title is-3 has-text-centered" id="card-product-description">Orange</h3>-->
-                <p class="has-text-centered">
-                  In addition to cash and shopping cards, we will also offer free car redemption during the anniversary celebration. Join us and we will tell you the date of the anniversary celebration.
-                </p>
+<!--                <p class="has-text-centered">-->
+<!--                  In addition to cash and shopping cards, we will also offer free car redemption during the anniversary celebration. Join us and we will tell you the date of the anniversary celebration.-->
+<!--                </p>-->
               </div>
             </div>
           </div>

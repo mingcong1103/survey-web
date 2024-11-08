@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      UserInfo:{},
       showMenu: false
     }
   },
@@ -16,10 +17,13 @@ export default {
       window.location.href = '/';
     }
   },
-  computed:{
+  computed: {
     isLogin() {
       const access_token = localStorage.getItem('access_token');
       return access_token !== null;
+    },
+    UserInfo() {
+      return this.$store.state.UserInfo;
     }
   }
 }
@@ -53,7 +57,7 @@ export default {
 
           <div v-if="isLogin" class="navbar-end">
             <div class="navbar-item has-dropdown is-hoverable">
-              <a class="navbar-link is-arrowless">Hello, <span class="is-capitalized">friend</span></a>
+              <a class="navbar-link is-arrowless">Hello, <span class="is-capitalized">{{ UserInfo.last_name }}</span></a>
               <div class="navbar-dropdown">
                 <router-link to="/userCenter/wallet" class="navbar-item">
                     <span class="icon is-small">

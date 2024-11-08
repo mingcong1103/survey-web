@@ -7,16 +7,24 @@
     <footer>
       <div class="footer-nav">
         <div class="footer-nav-item">
-          <span>About Us</span>
+          <router-link to="/userCenter/newDetails/90">
+            <span class="has-text-grey">About Us</span>
+          </router-link>
         </div>
         <div class="footer-nav-item">
-          <span>Contact Us</span>
+          <router-link to="/userCenter/newDetails/92">
+            <span class="has-text-grey">Contact Us</span>
+          </router-link>
         </div>
         <div class="footer-nav-item">
-          <span>Terms of Service</span>
+          <router-link to="/userCenter/newDetails/93">
+            <span class="has-text-grey">Terms of Service</span>
+          </router-link>
         </div>
         <div class="footer-nav-item">
-          <span>Privacy Policy</span>
+          <router-link to="/userCenter/newDetails/94">
+            <span class="has-text-grey">Privacy Policy</span>
+          </router-link>
         </div>
       </div>
       <div class="footer-copyright">

@@ -1,5 +1,5 @@
 import axios from 'axios';
-const ApiUrl = 'http://192.168.31.21:8888';
+const ApiUrl = 'https://api.surveymonkey.club/';
 // 创建 Axios 实例
 const instance = axios.create({
     baseURL: ApiUrl, // 设置基础 URL
